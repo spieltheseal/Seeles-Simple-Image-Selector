@@ -153,35 +153,16 @@ let mut backgroundimage: still_image::StillImage = still_image::StillImage::new(
     loop {
         clear_background(WHITE);
     
-        draw_grid(50.0, RED);
+        
         backgroundimage.draw();
-        area();
+       
      (lbl_msg, image_box, tm) = buttons(&btn_1, tm, &btn_2, &btn_3, &btn_4, &btn_5, &btn_random, &btn_exit, lbl_msg, image_box);
         lbl_msg.draw();
         image_box.draw();
         next_frame().await;
     }
 }
-fn area (){ // shows area for interface
 
-draw_rectangle(350.0, 400.0, 450.0, 300.0, GRAY);
-draw_rectangle(355.0, 405.0, 440.0, 290.0, WHITE);
-draw_rectangle(50.0, 50.0, 250.0, 50.0, GRAY);
-draw_rectangle(55.0, 55.0, 240.0, 40.0, WHITE);
-draw_rectangle(50.0, 112.5, 250.0, 50.0, GRAY);
-draw_rectangle(55.0, 117.5, 240.0, 40.0, WHITE);
-draw_rectangle(50.0, 175.0, 250.0, 50.0, GRAY);
-draw_rectangle(55.0, 180.0, 240.0, 40.0, WHITE);
-draw_rectangle(50.0, 237.5, 250.0, 50.0, GRAY);
-draw_rectangle(55.0, 242.5, 240.0, 40.0, WHITE);
-draw_rectangle(50.0, 300.0, 250.0, 50.0, GRAY);
-draw_rectangle(55.0, 305.0, 240.0, 40.0, WHITE);
-draw_rectangle(50.0, 400.0, 250.0, 50.0, GRAY);
-draw_rectangle(55.0, 405.0, 240.0, 40.0, WHITE);
-
-draw_rectangle(50.0, 650.0, 250.0, 50.0, RED);
-draw_rectangle(55.0, 655.0, 240.0, 40.0, WHITE);
- }
 
 
 fn buttons(btn_1: &TextButton, tm: TextureManager, btn_2: &TextButton, btn_3: &TextButton, btn_4: &TextButton, btn_5: &TextButton, btn_random: &TextButton, btn_exit: &TextButton,mut lbl_msg: Label, mut image_box: StillImage) -> (Label, StillImage, TextureManager){ // checks if buttons are clicked and changes image variable accordingly
